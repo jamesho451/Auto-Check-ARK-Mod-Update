@@ -63,7 +63,7 @@ user is the gmail address before the @, password is the password of the gmail ac
 
 1.4  Test msmtp by running the following command: 
 
-echo "Hello this is sending email using msmtp" | msmtp <your email address>(don't include <>)
+echo "Hello this is sending email using msmtp" | msmtp "your email address"(don't include ")
   
 you should receive an email
 
@@ -77,7 +77,7 @@ set mta=/usr/bin/msmtp
 
 1.6  Test by running the following command:
   
-echo "THIS IS A TEST EMAIL" | mail -s "Test" <your email address>
+echo "THIS IS A TEST EMAIL" | mail -s "Test" "your email address"(don't include ")
   
 you should receive an email
 
