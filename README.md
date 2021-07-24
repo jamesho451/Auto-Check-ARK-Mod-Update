@@ -5,7 +5,7 @@ Automatically check update of ark server and its mods and send out email reminde
 curl, jq, grep. A quick google search should give you how to install them
 
 
-## Some Notes
+## Notes
 For linux only, this instruction is made for both Debian/Ubuntu and CentOS/RHEL
 
 The CheckUpdate-Reference is a filled out version of the script for your reference
