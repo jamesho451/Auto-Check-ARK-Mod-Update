@@ -19,6 +19,7 @@ The script does give false alarm from time to time, probably because steam's api
 1.1  Run the commands below with root
 
 CentOS/RHEL:
+
   yum install ca-certificates
   update-ca-trust enable
   update-ca-trust
