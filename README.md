@@ -17,7 +17,6 @@ The script does give false alarm from time to time, probably because steam's api
 
 ### 1. Set up the email server
 1.1  Run the commands below with root
-
 ```
 CentOS/RHEL:
   yum install ca-certificates
@@ -32,6 +31,7 @@ Debian/Ubuntu:
   apt-get install msmtp-mta
   apt-get install bsd-mailx
   ```
+ 
  
 1.2  go to /etc/msmtprc, create one if it's not there, it should include the following
 ------------------------------------------------Start copy below this line
