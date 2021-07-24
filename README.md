@@ -1,7 +1,7 @@
 # ARK-Auto-Check-Update
 Automatically check update of ark server and its mods and send out email reminder when an update is avaliable
 
-# Prerequestities 
+## Prerequestities 
 curl, jq, grep. A quick google search should give you how to install them
 
 
@@ -18,8 +18,8 @@ The script does give false alarm from time to time, probably because steam's api
 ### 1. Set up the email server
 1.1  Run the commands below with root
 
+```
 CentOS/RHEL:
-
   yum install ca-certificates
   update-ca-trust enable
   update-ca-trust
@@ -31,6 +31,7 @@ Debian/Ubuntu:
   update-ca-certificates
   apt-get install msmtp-mta
   apt-get install bsd-mailx
+  ```
  
 1.2  go to /etc/msmtprc, create one if it's not there, it should include the following
 ------------------------------------------------Start copy below this line
