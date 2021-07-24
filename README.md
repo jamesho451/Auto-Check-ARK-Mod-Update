@@ -10,7 +10,7 @@ For linux only, this instruction is made for both Debian/Ubuntu and CentOS/RHEL
 
 The CheckUpdate-Reference is a filled out version of the script for your reference
 
-I don't include commands for things like creating files and making a file executable because I use programs like WinSCP and Filezilla to access my server's files so if you're lost trying to follow this with only a shell just keep this in mind
+I don't include commands for things like creating files and making a file executable because I use programs like WinSCP and Filezilla to access my server's files. If you're lost trying to follow this with only a shell just keep this in mind
 
 The script does give false alarm from time to time, probably because steam's api doesn't have 100% uptime. The best practice is to wait till you get two emails in a row before you do anything.
 
