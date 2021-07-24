@@ -30,7 +30,7 @@ Debian/Ubuntu:
   update-ca-certificates
   apt-get install msmtp-mta
   apt-get install bsd-mailx
-  
+```
   
 1.2  go to /etc/msmtprc, create one if it's not there, it should include the following
 
