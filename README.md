@@ -90,7 +90,8 @@ you should receive an email
 3.1 Create two files in /etc/systemd/system, one called checkarkupdate.timer, one called checkarkupdate.service
 
 3.2 place the following in checkarkupdate.timer
------------------------------------
+ ```
+-----------------------------------start copy below this line
 [Unit]
 Description=check for ARK version or mods update
 
@@ -100,21 +101,26 @@ OnBootSec=10
 
 [Install]
 WantedBy=timers.target
------------------------------------
+-----------------------------------end copy above this line
+  ```
 *900 means to run the script every 15 minutes, change it as desired
 
 3.3 place the following in checkarkupdate.service
------------------------------------
+  ```
+-----------------------------------start copy below this line
 [Unit]
 Description=check for ARK version or mods update
 
 [Service]
 Type=forking
 ExecStart=/bin/bash $arkserverpath/CheckUpdate.sh
-----------------------------------
+----------------------------------end copy above this line
+  ```
 *replace $arkserverpath with your server path as defined in the script
 
 3.4 run the following commands
+  ```
   systemctl daemon-reload
   systemctl enable checkarkupdate.timer(this will make the timer start on boot, optional)
   systemctl start checkarkupdate.timer
+  ```
