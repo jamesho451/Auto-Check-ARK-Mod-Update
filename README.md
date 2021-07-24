@@ -51,16 +51,14 @@ password       ******
 account default : gmail
 --------------------------------------------------Stop copy above this line
 ```
+```
 for CentOS, replace *see below* with /etc/pki/tls/certs/ca-bundle.crt
-
- for Debian/Ubuntu, replace *see below* with /etc/ssl/certs/ca-certificates.crt
- 
+for Debian/Ubuntu, replace *see below* with /etc/ssl/certs/ca-certificates.crt
 user is the gmail address before the @, password is the password of the gmail account
-
+```
 
 
 1.3  turn on less secure apps in the gmail account you're using
-
 
 
 1.4  Test msmtp by running the following command: 
