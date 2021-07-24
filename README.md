@@ -1,17 +1,18 @@
 # ARK-Auto-Check-Update
 Automatically check update of ark server and its mods and send out email reminder when an update is avaliable
+
+# Prerequestities 
+curl, jq, grep. A quick google search should give you how to install them
+
+
+# Some Notes
 For linux only, this instruction is made for both Debian/Ubuntu and CentOS/RHEL
-
-
-Prerequestities: curl, jq, grep. A quick google search should give you how to install them
-
 The CheckUpdate-Reference is a filled out version of the script for your reference
-
 I don't include commands for things like creating files and making a file executable because I use programs like WinSCP and Filezilla to access my server's files so if you're lost trying to follow this with only a shell just keep this in mind
-
 The script does give false alarm from time to time, probably because steam's api doesn't have 100% uptime. The best practice is to wait till you get two emails in a row before you do anything.
 
-1. Set up the email server, so you can send email with the mail command
+
+# 1. Set up the email server
 1.1  Run the commands below with root
 CentOS/RHEL:
   yum install ca-certificates
@@ -28,20 +29,19 @@ Debian/Ubuntu:
  
 1.2  go to /etc/msmtprc, create one if it's not there, it should include the following
 ------------------------------------------------Start copy below this line
-#set default values for all following accounts.
 defaults
 auth           on
 tls            on
 tls_trust_file  *see below*
 logfile        ~/.msmtp.log
-# Gmail
+
 account        gmail
 host           smtp.gmail.com
 port           587
 from           xxx@gmail.com
 user           xxx
 password       ******
-# Set a default account
+
 account default : gmail
 --------------------------------------------------Stop copy above this line
 *for CentOS, replace *see below* with /etc/pki/tls/certs/ca-bundle.crt
@@ -65,10 +65,11 @@ echo "THIS IS A TEST EMAIL" | mail -s "Test" <your email address>
 you should receive an email
 
 
-2. Fill out the scipt itself, the directions are included in the script, place the script in the ark server directory as defined in the script, and make it exeutable by root
+# 2. Fill out the scipt
+  the directions are included in the script, place the script in the ark server directory as defined in the script, and make it exeutable by root
 
 
-3. Use systemd to run the script periodically
+# 3. Use systemd to run the script periodically
 3.1 Create two files in /etc/systemd/system, one called checkarkupdate.timer, one called checkarkupdate.service
 
 3.2 place the following in checkarkupdate.timer
