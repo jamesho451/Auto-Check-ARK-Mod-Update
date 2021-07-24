@@ -69,11 +69,11 @@ you should receive an email
 
   
 1.5  go to /etc/mail.rc, if it's not there create one, and add this line:
-  
+```
 -------------------------start copy below this line
 set mta=/usr/bin/msmtp 
 -------------------------end copy above this line
-
+```
 
 1.6  Test by running the following command:
   
