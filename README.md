@@ -32,7 +32,6 @@ Debian/Ubuntu:
   apt-get install bsd-mailx
   ```
  
- 
 1.2  go to /etc/msmtprc, create one if it's not there, it should include the following
 ------------------------------------------------Start copy below this line
 defaults
