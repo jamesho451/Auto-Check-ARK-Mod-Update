@@ -5,7 +5,7 @@ Automatically check update of ark server and its mods and send out email reminde
 curl, jq, grep. A quick google search should give you how to install them
 
 
-# Some Notes
+## Some Notes
 For linux only, this instruction is made for both Debian/Ubuntu and CentOS/RHEL
 
 The CheckUpdate-Reference is a filled out version of the script for your reference
@@ -15,7 +15,7 @@ I don't include commands for things like creating files and making a file execut
 The script does give false alarm from time to time, probably because steam's api doesn't have 100% uptime. The best practice is to wait till you get two emails in a row before you do anything.
 
 
-# 1. Set up the email server
+### 1. Set up the email server
 1.1  Run the commands below with root
 
 CentOS/RHEL:
@@ -70,11 +70,11 @@ echo "THIS IS A TEST EMAIL" | mail -s "Test" <your email address>
 you should receive an email
 
 
-# 2. Fill out the scipt
+### 2. Fill out the scipt
   the directions are included in the script, place the script in the ark server directory as defined in the script, and make it exeutable by root
 
 
-# 3. Use systemd to run the script periodically
+### 3. Use systemd to run the script periodically
 3.1 Create two files in /etc/systemd/system, one called checkarkupdate.timer, one called checkarkupdate.service
 
 3.2 place the following in checkarkupdate.timer
