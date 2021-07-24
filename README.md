@@ -31,6 +31,7 @@ Debian/Ubuntu:
   apt-get install msmtp-mta
   apt-get install bsd-mailx
   
+  
 1.2  go to /etc/msmtprc, create one if it's not there, it should include the following
 ```
 ------------------------------------------------Start copy below this line
@@ -51,23 +52,33 @@ account default : gmail
 --------------------------------------------------Stop copy above this line
 
 *for CentOS, replace *see below* with /etc/pki/tls/certs/ca-bundle.crt
+
  for Debian/Ubuntu, replace *see below* with /etc/ssl/certs/ca-certificates.crt
+ 
 *user is the gmail address before the @, password is the password of the gmail account
+
 
 1.3  turn on less secure apps in the gmail account you're using
 
+
 1.4  Test msmtp by running the following command: 
+
 echo "Hello this is sending email using msmtp" | msmtp <your email address>(don't include <>)
+  
 you should receive an email
 
+  
 1.5  go to /etc/mail.rc, if it's not there create one, and add this line:
+  
 -------------------------start copy below this line
 set mta=/usr/bin/msmtp 
 -------------------------end copy above this line
 
 
 1.6  Test by running the following command:
+  
 echo "THIS IS A TEST EMAIL" | mail -s "Test" <your email address>
+  
 you should receive an email
 
 
