@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#update certificate(CentOS only, delete this section if you're using Debian/Ubuntu) 
+#CentOS only, delete this section if you're using Debian/Ubuntu
 update-ca-trust enable
 update-ca-trust
 
-#update certificate(Debian/Ubuntu only, delte this section if your're using CentOS)
+#Debian/Ubuntu only, delte this section if your're using CentOS
 update-ca-certificates
 
 
